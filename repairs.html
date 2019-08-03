@@ -107,6 +107,15 @@
               />
             </div>
             <div class="form-group">
+              <label for="Cost"> Cost</label>
+              <input
+                type="number"
+                class="form-control"
+                id="CostInput"
+                placeholder="$35/wk"
+              />
+            </div>
+            <div class="form-group">
               <label for="otherNotes">Additional Notes/Instruction</label>
               <textarea
                 class="form-control"
@@ -116,21 +125,24 @@
             </div>
 
             <div class="form-group">
-              <label for="isComplete">Has this been completed?</label>
-              <select class="form-control" id="isCompleteSelect">
-                <option>Yes</option>
-                <option>No</option>
+              <label for="priority">Priority</label>
+              <select class="form-control" id="statusSelect">
+                <option>low</option>
+                <option>medium</option>
+                <option>high</option>
               </select>
             </div>
 
-            <div class="card-header">If add to calendar</div>
             <div class="form-group">
-              <label for="isRecurring">Is this recurring?</label>
-              <select class="form-control" id="isRecurringSelect">
-                <option>Yes</option>
-                <option>No</option>
+              <label for="status">Status</label>
+              <select class="form-control" id="statusSelect">
+                <option>Thinking about it!</option>
+                <option>Getting Bids</option>
+                <option>In Progress</option>
+                <option>Completed</option>
               </select>
             </div>
+
             <div class="form-group">
               <label for="isVendor">Do you use a vendor?</label>
               <select class="form-control" id="isVendorSelect">
@@ -146,7 +158,17 @@
                 <option>Vendor 2</option>
               </select>
             </div>
+
+            <div class="card-header">If add to calendar</div>
             <div class="form-group">
+              <label for="isRecurring">Is this recurring?</label>
+              <select class="form-control" id="isRecurringSelect">
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+            </div>
+
+            <!-- <div class="form-group">
               <label for="vendor">Add bids/receipts</label>
               <div class="custom-file">
                 <input type="file" class="custom-file-input" id="customFile" />
@@ -154,7 +176,7 @@
                   >Choose file</label
                 >
               </div>
-            </div>
+            </div> -->
 
             <button class="btn btn-lg btn-success mt-3">submit</button>
           </form>
