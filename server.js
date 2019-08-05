@@ -4,6 +4,8 @@ var parseString = require("xml2js").parseString;
 function convertToJSON2(details) {
   parseString(details, function(err, result) {
     // console.log(JSON.stringify(result, null, 2));
+
+    console.log(result);
     const homeData =
       result["UpdatedPropertyDetails:updatedPropertyDetails"].response[0];
     console.log("\n====================================");
@@ -28,7 +30,7 @@ function convertToJSON2(details) {
 
 function convertToJSON(xml) {
   parseString(xml, function(err, result) {
-    // console.log(JSON.stringify(result, null, 2));
+    console.log(JSON.stringify(result, null, 2));
     const propData =
       result["SearchResults:searchresults"].response[0].results[0].result;
     console.log("\n====================================");
